@@ -18,6 +18,6 @@ const membreSchema = mongoose.Schema({
   updated_at: {type: Date, default: Date.now }
 });
 membreSchema.plugin(uniqueValidator);
-membreSchema.index({ "nom": 1,"prenom":1,"naissance":1,"sexe":1,"telephone":1}, { unique: true });
+membreSchema.index({ "nom": 1,"prenom":1,"sexe":1,"telephone":1}, { unique: true });
 
-module.exports = mongoose.model('membre', membreSchema);
+module.exports = mongoose.model('Membre', membreSchema);
