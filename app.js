@@ -37,33 +37,19 @@ app.use(session({
     cookie: { maxAge: oneDay },
     resave: false 
 }));
-app.use('/images', express.static(path.join(__dirname, 'images')));
-app.use('/devoirs', express.static(path.join(__dirname, 'devoirs')));
-app.use('/actualites', express.static(path.join(__dirname, 'actualites')));
-
 
 //Recuperation des routes
 
 const userRoutes = require('./routes/user');
 const anneeRoutes = require('./routes/annee');
 const contactRoutes = require('./routes/contact');
-const universiteRoutes = require('./routes/universite');
-const faculteRoutes = require('./routes/faculte');
-const etudiantRoutes = require('./routes/etudiant');
-const profRoutes = require('./routes/prof');
+
 const roleRoutes = require('./routes/role');
 const mailRoutes = require('./routes/mail');
-const matiereRoutes = require('./routes/matiere');
-const courRoutes = require('./routes/cour');
-const noteRoutes = require('./routes/note');
-const devoirRoutes = require('./routes/devoir');
-const ressourceRoutes = require('./routes/ressource');
-const optionRoutes = require('./routes/option');
 const actualiteRoutes = require('./routes/actualite');
 const commentRoutes = require('./routes/comment');
-const inscriptionRoutes = require('./routes/inscription');
-const notecRoutes = require('./routes/notec');
-const matierecRoutes = require('./routes/matierec');
+const membreRoutes = require('./routes/membre');
+
 
 mongoose.set("strictQuery", false);
 //connexion a  la base de donnees
@@ -89,25 +75,15 @@ app.use((req, res, next) => {
 
 app.use('/api/auth', userRoutes);
 app.use('/api/annee', anneeRoutes);
-app.use('/api/faculte', faculteRoutes);
 
 app.use('/api/contact', contactRoutes);
-app.use('/api/universite', universiteRoutes);
-app.use('/api/etudiant', etudiantRoutes);
-app.use('/api/prof', profRoutes);
+
 app.use('/api/role', roleRoutes);
 app.use('/api/mail', mailRoutes);
-app.use('/api/matiere', matiereRoutes);
-app.use('/api/cour', courRoutes);
-app.use('/api/note', noteRoutes);
-app.use('/api/devoir', devoirRoutes);
-app.use('/api/ressource', ressourceRoutes);
-app.use('/api/option', optionRoutes);
+
 app.use('/api/actualite', actualiteRoutes);
 app.use('/api/comment', commentRoutes);
-app.use('/api/inscription', inscriptionRoutes);
-app.use('/api/notec', notecRoutes);
-app.use('/api/matierec', matierecRoutes);
+app.use('/api/membre', membreRoutes);
 
 
 app.get('/',(req,res,next)=>{

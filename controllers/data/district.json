@@ -1,0 +1,8 @@
+[
+    {"code":"1","nom":"Bethlehem","latitude":null,"longitude":null,"altitude":null,"created_at":null,"updated_at":null},
+    {"code":"2","nom":"Canaan","latitude":null,"longitude":null,"altitude":null,"created_at":null,"updated_at":null},
+    {"code":"3","nom":"Nazareth","latitude":null,"longitude":null,"altitude":null,"created_at":null,"updated_at":null},
+    {"code":"4","nom":"Salem","latitude":null,"longitude":null,"altitude":null,"created_at":null,"updated_at":null},
+    {"code":"5","nom":"Samarie","latitude":null,"longitude":null,"altitude":null,"created_at":null,"updated_at":null},
+    {"code":"6","nom":"Sarepta","latitude":null,"longitude":null,"altitude":null,"created_at":null,"updated_at":null}
+    ]
