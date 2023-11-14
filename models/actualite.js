@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
-const Universite = require('../models/universite');
+
 const Comment = require('../models/comment');
 const User = require('../models/user');
 
@@ -17,7 +17,7 @@ const actualiteSchema = mongoose.Schema({
   cible: {type: String},   
   links: [{type: String}], 
   comments:[{type:mongoose.Schema.Types.ObjectId, ref:"Comment"}], 
-  universite:{type:mongoose.Schema.Types.ObjectId, ref:"Universite"},
+  
   auteur:{type:mongoose.Schema.Types.ObjectId, ref:"User"},
   created_at: {type: Date, default: Date.now },
   updated_at: {type: Date, default: Date.now }

@@ -1,4 +1,4 @@
-const Universite = require('../models/universite');
+
 const Actualite = require('../models/actualite');
 const mongoose = require('mongoose');
 const logger = require("../utils/logger");
@@ -15,31 +15,23 @@ exports.createActualite = async(req, res, next) => {
   delete actualiteObject._userId;
   const actualite = new Actualite({
       ...actualiteObject,
-      universite : req.auth.universite,
+      
       auteur: req.auth.userId,
       //image: `${req.protocol}://${req.get('host')}/actualites/${req.file.filename}`      
   });
   
   actualite.save()
   .then(() => { 
-    Universite.findOne({ _id: req.auth.universite}, (err, universite) => {
-         
-        if (universite) {
-            universite.actualites.push(actualite);              
-            universite.save()   
+     
             res.status(201).json(actualite)       
-        }        
-    }) 
-         
+      
   })   
   .catch(error => { res.status(400).json( { error })}) 
 }
 
 exports.getAllActualite = async (req, res, next) => { 
-    const url = req.headers.origin  
-    const univ = await Universite.findOne({url:url})      
-
-  Actualite.find({universite:univ._id,publie:true, approuve:true}).sort({created_at: -1}).populate("comments").then(
+  
+  Actualite.find({publie:true, approuve:true}).sort({created_at: -1}).populate("comments").then(
     (actualites) => {
       res.status(201).json(actualites);
     }
@@ -53,10 +45,8 @@ exports.getAllActualite = async (req, res, next) => {
  };
 
 exports.getAllActualiteAdm = async (req, res, next) => { 
-    const url = req.headers.origin  
-    const univ = await Universite.findOne({url:url})      
-
-  Actualite.find({universite:univ._id}).sort({created_at: -1}).populate("comments").then(
+   
+  Actualite.find().sort({created_at: -1}).populate("comments").then(
     (actualites) => {
       res.status(201).json(actualites);
     }
@@ -92,7 +82,7 @@ exports.getActualite = async (req, res, next) => {
     const actualite = new Actualite({
       _id: req.params.id,
       ...actualiteObject ,
-      universite:req.auth.universite 
+    
       });
     Actualite.updateOne({_id: req.params.id}, actualite).then(
       () => {

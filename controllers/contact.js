@@ -1,5 +1,5 @@
 const Contact = require('../models/contact');
-const Universite = require('../models/universite');
+
 const mongoose = require('mongoose');
 
 
@@ -23,14 +23,11 @@ exports.createContact = async (req, res, next) => {
 
   contact.save()
   .then(() => { 
-    Universite.findOne({ _id: univ._id }, (err, universite) => {
-        
-      if (universite) {
-          universite.contacts.push(contact);
-          universite.save();
+       
+     
           res.status(201).json(contact)
-      }
-  });
+     
+  
     
   })
   .catch(error => { res.status(400).json( { error })})

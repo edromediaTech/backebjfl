@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
-const Universite = require('../models/universite');
+
 
 const userSchema = mongoose.Schema({
   name: {type: String , required:true},
@@ -8,7 +8,7 @@ const userSchema = mongoose.Schema({
   email: { type: String, required: true},
   password: { type: String, required: true },
   checInsc: { type: Boolean, default: false },
-  universite:{type:mongoose.Schema.Types.ObjectId, ref:"Universite"},
+ 
   created_at: { type: Date, default: Date.now },
   updated_at: { type: Date, default:Date.now}  
 });

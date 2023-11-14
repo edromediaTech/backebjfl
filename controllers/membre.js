@@ -6,7 +6,7 @@ const logger = require("../utils/logger");
 
 //const {role} = require('../role');
 
-exports.createmembre = async (req, res, next) => {         
+exports.createMembre = async (req, res, next) => {         
   const membreObject = req.body;
   delete membreObject._id;
   delete membreObject._userId;

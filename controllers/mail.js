@@ -1,4 +1,4 @@
-const Universite = require('../models/universite');
+
 const Mail = require('../models/mail');
 const axios = require('axios');
 
@@ -13,8 +13,6 @@ const DOMAIN = "https://api.mailgun.net/v3/upga.univ.ht"
 
       
 exports.sendEmail = async(req, res, next) => {
-  const url = req.headers.origin  
-  const univ = await Universite.findOne({url:url})      
  
     let transporter = nodemailer.createTransport({        
       host: "smtp.mailgun.org", 
@@ -47,14 +45,9 @@ exports.sendEmail = async(req, res, next) => {
             }); 
              mail.save()
             .then(() => { 
-              Universite.findOne({ _id: univ._id }, (err, universite) => {                    
-                  if (universite) {
-                      universite.mails.push(mail);              
-                      universite.save()  
+             
                       res.status(201).json({message:"Email sent"})                  
-                  }                  
-              }) 
-              
+                
             })             
             .catch(error => { res.status(400).json( { error })})             
             }
@@ -68,22 +61,16 @@ exports.sendEmail = async(req, res, next) => {
     const message = {created_at:req.body.Date,from:req.body.From, subject:req.body.Subject,to:req.body.To,html:req.body['body-html']}
     console.log('mail ok')
     
-    const url ='https://' + req.body.To.split('@')[1]
-    const univ = await Universite.findOne({url:url})      
    
     const email = new Mail({
       ...message,
-     "universite" : univ._id                  
+                 
   }); 
    email.save()
   .then(() => { 
-    Universite.findOne({ _id: univ._id }, (err, universite) => {                    
-        if (universite) {
-            universite.mails.push(email);              
-            universite.save()  
+   
             res.status(200).json(email)                
-        }                  
-    })     
+      
   })             
   .catch(error => { res.status(400).json( { error })})             
 }

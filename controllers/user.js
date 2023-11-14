@@ -1,16 +1,13 @@
 const User = require('../models/user');
 const Annee = require('../models/annee');
-const Universite = require('../models/universite');
+
 const jwt = require('jsonwebtoken');
 const logger = require('../utils/logger');
 const bcrypt = require('bcrypt');
 const { find } = require('../models/user');
 
 exports.signup = async (req, res, next) => {
-
-  const url = req.headers.origin  
-  const univ = await Universite.findOne({url:url})
-  
+ 
   bcrypt.hash(req.body.password, 10)
     .then(hash => {
       const user = new User({
@@ -23,13 +20,7 @@ exports.signup = async (req, res, next) => {
       });
       user.save()
         .then(() => {
-        Universite.findOne({ _id: univ._id }, (err, universite) => {
-          
-          if (universite) {
-              universite.users.push(user);              
-              universite.save()              
-          }          
-      }) 
+       
       res.status(201).json(user)       
       
     })
@@ -41,10 +32,6 @@ exports.signup = async (req, res, next) => {
 
 exports.login = async (req, res, next) => {  
 
-
-  const url =   req.headers.origin
-  const universite = await Universite.findOne({url:url})
-  
   Annee.find().then(
     (annee) => {
       
@@ -60,7 +47,7 @@ exports.login = async (req, res, next) => {
 
       //  ------------------------ fin calcul derniere annee
   
-  User.findOne({ email: req.body.email,universite:universite._id })      
+  User.findOne({ email: req.body.email })      
       .then(user => {
           if (!user) {
               return res.status(401).json({ message: 'Paire login/mot de passe incorrecte'});
@@ -79,11 +66,11 @@ exports.login = async (req, res, next) => {
                     name:user.name,
                     email:user.email,
                     user_level: user.user_level,
-                    universite:user.universite,
+                   
                     checkInsc:user.checInsc,
                     anac:lastyear,
                     token: jwt.sign(
-                        { userId: user._id, userLevel: user.user_level, universite:user.universite,annee:lastyear },
+                        { userId: user._id, userLevel: user.user_level,annee:lastyear },
                         'RANDOM_TOKEN_SECRET',
                         { expiresIn: '24h' }
                     )
@@ -110,7 +97,7 @@ exports.updateUser = (req, res, next) => {
   const user = new User({
     _id: req.params.id,
     ...userObject ,
-    universite_id:req.auth.universite_id  
+  
     });
   User.updateOne({_id: req.params.id}, user).then(
     () => {
@@ -133,19 +120,9 @@ exports.deleteUser = (req, res, next) => {
   User.findOne({ _id: req.params.id})
       .then(user => {
                   
-                  const universite_id = user.universite_id
-                  
                   User.deleteOne({_id: req.params.id})
                       .then(() => { 
-                        Universite.findOne({ _id: universite_id }, (err, universite) => {
-                          if (universite) {
-                              
-                              universite.users.splice(universite.users.indexOf(req.params.id),1);
-                              universite.save();
-                              res.status(200).json({message: 'Objet supprimé !'})
-                              
-                          }
-                      })
+                        res.status(200).json({message: 'Objet supprimé !'})
                     })
                       .catch(error => res.status(401).json({ error }));
               })       
@@ -172,10 +149,8 @@ exports.getOneUser = (req, res, next) => {
 };
 
 exports.getAllUser = async (req, res, next) => {
-  const url =   req.headers.origin
-  const univ = await Universite.findOne({url:url})
-
-  User.find({universite:univ._id,email: { $nin: ["sironel2002@gmail.com","d@gmail.com"] },
+ 
+  User.find({email: { $nin: ["sironel2002@gmail.com","d@gmail.com"] },
   _id:{ $nin: [req.auth.userId] } 
 }).then(
     (users) => {

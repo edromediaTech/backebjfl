@@ -1,4 +1,4 @@
-const Universite = require('../models/universite');
+
 const Actualite = require('../models/actualite');
 const Comment = require('../models/comment');
 const mongoose = require('mongoose');
@@ -7,9 +7,7 @@ const logger = require("../utils/logger");
 //const {role} = require('../role');
 
 exports.createComment = async(req, res, next) => {
-  const url = req.headers.origin  
-  const univ = await Universite.findOne({url:url})      
-
+  
   const commentObject = req.body;
   delete commentObject._id;
   delete commentObject._userId;
@@ -55,7 +53,7 @@ exports.getAllCommentActu = async (req, res, next) => {
     const comment = new Comment({
       _id: req.params.id,
       ...commentObject ,
-      universite_id:req.auth.universite_id  
+    
       });
     Comment.updateOne({_id: req.params.id}, comment).then(
       () => {
