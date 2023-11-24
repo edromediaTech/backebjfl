@@ -1,0 +1,449 @@
+[{
+  "_id": {
+    "$oid": "6553dfd58c4810543d83873f"
+  },
+  "code": "61",
+  "district": "6553d8348c4810543d83873d",
+  "nom": "Abraham",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838740"
+  },
+  "code": "62",
+  "district": "6553d8348c4810543d83873d",
+  "nom": "Josue",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838741"
+  },
+  "code": "63",
+  "district": "6553d8348c4810543d83873d",
+  "nom": "Malachie",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838742"
+  },
+  "code": "64",
+  "district": "6553d8348c4810543d83873d",
+  "nom": "Jonas",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838743"
+  },
+  "code": "65",
+  "district": "6553d8348c4810543d83873d",
+  "nom": "Michee",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838744"
+  },
+  "code": "21",
+  "district": "6553d8348c4810543d838739",
+  "nom": "Jeremie",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838745"
+  },
+  "code": "22",
+  "district": "6553d8348c4810543d838739",
+  "nom": "David",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838746"
+  },
+  "code": "41",
+  "district": "6553d8348c4810543d83873b",
+  "nom": "Sara",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838747"
+  },
+  "code": "42",
+  "district": "6553d8348c4810543d83873b",
+  "nom": "Moise",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838748"
+  },
+  "code": "31",
+  "district": "6553d8348c4810543d83873a",
+  "nom": "Elisee",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838749"
+  },
+  "code": "11",
+  "district": "6553d8348c4810543d838738",
+  "nom": "Elkana",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d83874a"
+  },
+  "code": "12",
+  "district": "6553d8348c4810543d838738",
+  "nom": "Habacuc",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d83874b"
+  },
+  "code": "13",
+  "district": "6553d8348c4810543d838738",
+  "nom": "Samuel",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d83874c"
+  },
+  "code": "14",
+  "district": "6553d8348c4810543d838738",
+  "nom": "Sophonie",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d83874d"
+  },
+  "code": "15",
+  "district": "6553d8348c4810543d838738",
+  "nom": "Isaac",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d83874e"
+  },
+  "code": "16",
+  "district": "6553d8348c4810543d838738",
+  "nom": "Mardochee",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d83874f"
+  },
+  "code": "23",
+  "district": "6553d8348c4810543d838739",
+  "nom": "Samson",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838750"
+  },
+  "code": "24",
+  "district": "6553d8348c4810543d838739",
+  "nom": "Ezechias",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838751"
+  },
+  "code": "25",
+  "district": "6553d8348c4810543d838739",
+  "nom": "Esaie",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838752"
+  },
+  "code": "32",
+  "district": "6553d8348c4810543d83873a",
+  "nom": "Nehemie",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838753"
+  },
+  "code": "33",
+  "district": "6553d8348c4810543d83873a",
+  "nom": "Noe",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838754"
+  },
+  "code": "34",
+  "district": "6553d8348c4810543d83873a",
+  "nom": "Josaphat",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838755"
+  },
+  "code": "35",
+  "district": "6553d8348c4810543d83873a",
+  "nom": "Gedeon",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838756"
+  },
+  "code": "43",
+  "district": "6553d8348c4810543d83873b",
+  "nom": "Elie",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838757"
+  },
+  "code": "44",
+  "district": "6553d8348c4810543d83873b",
+  "nom": "Esther",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838758"
+  },
+  "code": "45",
+  "district": "6553d8348c4810543d83873b",
+  "nom": "Osee",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d838759"
+  },
+  "code": "51",
+  "district": "6553d8348c4810543d83873c",
+  "nom": "Jephte",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d83875a"
+  },
+  "code": "52",
+  "district": "6553d8348c4810543d83873c",
+  "nom": "Daniel",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d83875b"
+  },
+  "code": "53",
+  "district": "6553d8348c4810543d83873c",
+  "nom": "Ezechiel",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+
+  "_id": {
+    "$oid": "6553dfd58c4810543d83875c"
+  },
+  "code": "54",
+  "district": "6553d8348c4810543d83873c",
+  "nom": "Zacharie",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],  
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d83875d"
+  },
+  "code": "55",
+  "district": "6553d8348c4810543d83873c",
+  "nom": "Deborah",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553dfd58c4810543d83875e"
+  },
+  "code": "56",
+  "district": "6553d8348c4810543d83873c",
+  "nom": "Esdras",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "membres":[],
+  "created_at": null,
+  "updated_at": null
+}]

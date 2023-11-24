@@ -1,0 +1,141 @@
+[{
+  "_id": {
+    "$oid": "6553d8348c4810543d838738"
+  },
+  "code": "1",
+  "nom": "Bethlehem",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "zones":[ {
+    "$oid":"6553dfd58c4810543d838749"},
+    {
+      "$oid":"6553dfd58c4810543d83874a"},
+    {
+      "$oid":"6553dfd58c4810543d83874b"},
+    {
+        "$oid":"6553dfd58c4810543d83874c"},
+    {
+          "$oid":"6553dfd58c4810543d83874d"},
+    {
+            "$oid":"6553dfd58c4810543d83874e"}],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553d8348c4810543d838739"
+  },
+  "code": "2",
+  "nom": "Canaan",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "zones":[
+    {
+      "$oid":"6553dfd58c4810543d838744"},
+      {
+        "$oid":"6553dfd58c4810543d838745"},
+        {
+          "$oid":"6553dfd58c4810543d83874f"},
+          {
+            "$oid": "6553dfd58c4810543d838750"},
+            {
+              "$oid":"6553dfd58c4810543d838751"}],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553d8348c4810543d83873a"
+  },
+  "code": "3",
+  "nom": "Nazareth",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "zones":[
+    {
+      "$oid": "6553dfd58c4810543d838748"},
+      {
+        "$oid":"6553dfd58c4810543d838752"},
+        {
+          "$oid":"6553dfd58c4810543d838753"},
+          {
+            "$oid":"6553dfd58c4810543d838754"},
+            {
+              "$oid":"6553dfd58c4810543d838755"}],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553d8348c4810543d83873b"
+  },
+  "code": "4",
+  "nom": "Salem",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "zones":[
+    {
+      "$oid":"6553dfd58c4810543d838746"},
+      {
+        "$oid":"6553dfd58c4810543d838747"},
+        {
+          "$oid":"6553dfd58c4810543d838756"},
+          {
+            "$oid":"6553dfd58c4810543d838757"},
+            {
+              "$oid":"6553dfd58c4810543d838758"}],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553d8348c4810543d83873c"
+  },
+  "code": "5",
+  "nom": "Samarie",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "zones":[
+    {
+      "$oid":"6553dfd58c4810543d838759"},
+      {
+        "$oid":"6553dfd58c4810543d83875a"},
+        {
+          "$oid":"6553dfd58c4810543d83875b"},
+          {
+            "$oid":"6553dfd58c4810543d83875c"},
+            {
+              "$oid":"6553dfd58c4810543d83875d"},
+              {
+                "$oid":"6553dfd58c4810543d83875e"}],
+  "created_at": null,
+  "updated_at": null
+},
+{
+  "_id": {
+    "$oid": "6553d8348c4810543d83873d"
+  },
+  "code": "6",
+  "nom": "Sarepta",
+  "latitude": null,
+  "longitude": null,
+  "altitude": null,
+  "zones":[
+    {
+      "$oid":"6553dfd58c4810543d83873f"}, 
+      {
+        "$oid":"6553dfd58c4810543d838740"},
+        {
+          "$oid":"6553dfd58c4810543d838741"},
+          {
+            "$oid":"6553dfd58c4810543d838742"},
+            {
+              "$oid":"6553dfd58c4810543d838743"}],
+  "created_at": null,
+  "updated_at": null
+}]
