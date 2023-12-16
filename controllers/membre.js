@@ -70,6 +70,20 @@ exports.getAllMembre = async(req, res, next) => {
   ); 
  };
 
+exports.getAllMembreZone = async(req, res, next) => { 
+  Zone.find().populate("membres").then(
+    (zones) => {
+      res.status(200).json(zones);
+    }
+  ).catch(
+    (error) => {
+      res.status(401).json({
+        error: error
+      });
+    }
+  ); 
+ };
+
  exports.deleteMembre = (req, res, next) => {
   Membre.findOne({ _id: req.params.id})
       .then(membre => {
