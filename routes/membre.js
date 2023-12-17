@@ -9,7 +9,7 @@ router.post('/',   membreCtrl.createMembre);
 router.patch('/:id',  membreCtrl.updateMembre);
 router.delete('/:id', membreCtrl.deleteMembre);
 router.get('/all/', membreCtrl.getAllMembre);
-router.get('/all/zone', membreCtrl.getAllMembreZone);
+router.get('/all/zone', membreCtrl.getAllMembreDistrict);
 
 
 module.exports = router;

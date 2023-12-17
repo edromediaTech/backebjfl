@@ -1,5 +1,6 @@
 const Zone = require('../models/zone');
 const Membre = require('../models/membre');
+const District = require('../models/district');
 const mongoose = require('mongoose');
 
 const logger = require("../utils/logger");
@@ -82,6 +83,26 @@ exports.getAllMembreZone = async(req, res, next) => {
       });
     }
   ); 
+ };
+
+exports.getAllMembreDistrict = async(req, res, next) => { 
+  try {
+    // Récupérer tous les districts avec peuplement des zones et membres
+    const districts = await District.find().populate({
+      path: 'zones',
+      model: 'Zone',
+      populate: {
+        path: 'membres',
+        model: 'Membre'
+      }
+    }).exec();
+
+    // Envoyer le tableau de districts en réponse
+    res.json({ districts });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Erreur lors de la récupération des districts.' });
+  }
  };
 
  exports.deleteMembre = (req, res, next) => {
