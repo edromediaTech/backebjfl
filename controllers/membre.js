@@ -98,7 +98,7 @@ exports.getAllMembreDistrict = async(req, res, next) => {
     }).exec();
 
     // Envoyer le tableau de districts en réponse
-    res.json({ districts });
+    res.status(201).json({ districts });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Erreur lors de la récupération des districts.' });
