@@ -49,6 +49,7 @@ const mailRoutes = require('./routes/mail');
 const actualiteRoutes = require('./routes/actualite');
 const commentRoutes = require('./routes/comment');
 const membreRoutes = require('./routes/membre');
+const groupechantRoutes = require('./routes/groupechant');
 
 
 mongoose.set("strictQuery", false);
@@ -84,6 +85,7 @@ app.use('/api/mail', mailRoutes);
 app.use('/api/actualite', actualiteRoutes);
 app.use('/api/comment', commentRoutes);
 app.use('/api/membre', membreRoutes);
+app.use('/api/groupechant', groupechantRoutes);
 
 
 app.get('/',(req,res,next)=>{
