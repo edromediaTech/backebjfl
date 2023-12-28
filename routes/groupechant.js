@@ -5,7 +5,7 @@ const auth = require('../middleware/auth');
 
 const groupechantCtrl = require('../controllers/groupechant');
 router.post('/',   groupechantCtrl.createGroupechant);
-//router.patch('/:id',  groupechantCtrl.updategroupechant);
+router.patch('/:id',  groupechantCtrl.updateGroupechantById);
 router.delete('/:id', groupechantCtrl.deleteGroupechantById);
 router.get('/all/', groupechantCtrl.getAllGroupechants);
 
