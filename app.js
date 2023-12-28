@@ -23,7 +23,7 @@ const path = require('path');
 
 
 app.use(cors({
-  origin: ['http://localhost:3000','https://back.ebjfl.org'],
+  origin: ['http://localhost:3000','https://backend.ebjfl.org'],
   methods: '*',
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
