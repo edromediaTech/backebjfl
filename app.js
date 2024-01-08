@@ -43,7 +43,7 @@ app.use(session({
 const userRoutes = require('./routes/user');
 const anneeRoutes = require('./routes/annee');
 const contactRoutes = require('./routes/contact');
-
+const donRoutes = require('./routes/don');
 const roleRoutes = require('./routes/role');
 const mailRoutes = require('./routes/mail');
 const actualiteRoutes = require('./routes/actualite');
@@ -86,6 +86,7 @@ app.use('/api/actualite', actualiteRoutes);
 app.use('/api/comment', commentRoutes);
 app.use('/api/membre', membreRoutes);
 app.use('/api/groupechant', groupechantRoutes);
+app.use('/api/don', donRoutes);
 
 
 app.get('/',(req,res,next)=>{

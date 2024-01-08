@@ -10,7 +10,7 @@ const groupechantSchema = mongoose.Schema({
   maestro : { type: String },  
   fondation: { type: Date, trim: true },
   telephone: { type: String, trim: true },  
-  whatsapp: { type: String, trim: true, required:true, trim: true  },  
+  whatsapp: { type: String, trim: true, required:true},  
   created_at: {type: Date, default: Date.now },
   updated_at: {type: Date, default: Date.now }
 });
