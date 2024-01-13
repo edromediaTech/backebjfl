@@ -1,13 +1,17 @@
+const { log } = require('winston');
 const Don = require('../models/don');
 
 // Fonction pour créer un don
 exports.createDon = async (req, res) => {
+  console.log(req.body)
   try {
-    const { montant, description } = req.body;
-    const don = new Don({ montant, description });
+   // const { montant, description } = req.body;
+    //const don = new Don({ montant, description });
+    const don = new Don(req.body);
     const savedDon = await don.save();
     res.status(201).json(savedDon);
   } catch (error) {
+   
     res.status(500).json({ error: error.message });
   }
 };
