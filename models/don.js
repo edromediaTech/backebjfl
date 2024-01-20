@@ -10,7 +10,8 @@ const donchema = mongoose.Schema({
   service :{  type: String, required:true }, // banque, cashapp, zelle
   depensecible:{type:String}, // vise une activite ou uneentite pour depenser
   district: { type: String },
-  preuve: { type: String }, // fiche de depot
+  preuve: { type: String }, // path fiche de depot
+  Idtrans: { type: String }, // Id transaction de depot
   datetrans:{type:Date}, // date de la transaction
   notrans:{type:String}, // numero transaction
   email: { type: String},
