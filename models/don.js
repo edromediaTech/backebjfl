@@ -1,20 +1,20 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
-
+const Preuvedon = require('../models/preuvedon');
 
 const donchema = mongoose.Schema({ 
-  nom: {  type: String, required:true, trim: true, unique: true },
-  prenom: {  type: String, required:true, trim: true, unique: true },
+  nom: {  type: String, required:true, trim: true },
+  prenom: {  type: String, required:true, trim: true },
   pays :{  type: String, required:true },
   ville :{  type: String, required:true },
   service :{  type: String, required:true }, // banque, cashapp, zelle
   depensecible:{type:String}, // vise une activite ou uneentite pour depenser
   district: { type: String },
-  preuve: { type: String }, // path fiche de depot
+  preuve:{type:String, default:null}, // image ref 
   Idtrans: { type: String }, // Id transaction de depot
   datetrans:{type:Date}, // date de la transaction
   notrans:{type:String}, // numero transaction
-  email: { type: String},
+  email: { type: String}, 
   montant : { type: Number, required:true, trim: true },  
   devise: { type: String },// dollar ou gourde
   telephone: { type: String, trim: true },  

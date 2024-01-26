@@ -50,6 +50,7 @@ const actualiteRoutes = require('./routes/actualite');
 const commentRoutes = require('./routes/comment');
 const membreRoutes = require('./routes/membre');
 const groupechantRoutes = require('./routes/groupechant');
+const preuvedonRoutes = require('./routes/preuvedon');
 
 
 mongoose.set("strictQuery", false);
@@ -87,6 +88,7 @@ app.use('/api/comment', commentRoutes);
 app.use('/api/membre', membreRoutes);
 app.use('/api/groupechant', groupechantRoutes);
 app.use('/api/don', donRoutes);
+app.use('/api/preuvedon', preuvedonRoutes);
 
 
 app.get('/',(req,res,next)=>{
