@@ -3,7 +3,7 @@ const Don = require('../models/don');
 
 // Fonction pour créer un don
 exports.createDon = async (req, res) => {
-  console.log(req.body)
+ 
   try {
    // const { montant, description } = req.body;
     //const don = new Don({ montant, description });
@@ -11,7 +11,7 @@ exports.createDon = async (req, res) => {
     const savedDon = await don.save();
     res.status(201).json(savedDon);
   } catch (error) {
-    console.log(error)
+   
     res.status(500).json({ error: error.message });
   }
 };
